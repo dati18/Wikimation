@@ -1,0 +1,18 @@
+{
+	"name": "Wikimation",
+	"author": ["Dat Nguyen", "Adam Shorland"],
+	"version": "1.0-alpha",
+	"descriptionmsg": "Workflow Automation",
+	"type": "Hook",
+	"requires": {
+		"MediaWiki": ">= 1.36.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\Wikimation\\": "includes/"
+	},
+	"Hooks": {
+		"PageSaveComplete": "MediaWiki\\Extension\\Wikimation\\HookHandler::onPageSaveComplete",
+		"WikibaseChangeNotification": "MediaWiki\\Extension\\Wikimation\\HookHandler::onWikibaseChangeNotification"
+	},
+	"manifest_version": 2
+}
